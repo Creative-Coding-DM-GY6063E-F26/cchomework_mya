@@ -8,7 +8,7 @@ const quotes = [
   { text: "form over function", source: "Sean" },
   { text: "iterative and experimental", source: "Scooby" },
   { text: "a community of practice", source: "Seth" },
-  { text: "an opportunity to stick it to the man", source: "Shifty-eyed Susan" }
+  { text: "an opportunity to stick it to the man", source: "Shifty-eyed Susan" },
   { text: "computation as an expressive, analytical, and visualizing medium", source: "NYU Steinhardt" },
   { text: "code and programming to create more expressive, designed web work", source: "Wix Studio Blog" },
   { text: "where self-expression and logic meet to form a beautiful kind of modern art", source: "Egyptian Streets" },
