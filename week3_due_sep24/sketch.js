@@ -15,23 +15,23 @@ function setup() {
       120,78, // top right
       127,127, //bottom r
       86, 127); // btm lft
- describe('blue trap under 2nd circle');
+ //'blue trap under 2nd circle' ;
   
    fill("#FF6600");
   circle(5, 88, 45);
-   describe(' first circle is orange off center to the left');
+  // first circle is orange off center to the left')
 
    fill("#FF6600");
   circle(76,92, 45);
-    describe(' second circle is orange off center to the right');
+  // second circle is orange off center to the right')
 
    fill("#FF6600");
   circle(142, 102, 45);
-    describe(' third circle is orange off center to the right');
+  // ' third circle is orange off center to the right');
 
     fill('#bb5573');
     quad(180,0,130, 0,130,60,180, 60);
-    describe('pink retangle at the top right of canvas');
+  // 'pink retangle at the top right of canvas');
   
   
   fill('#315497');
@@ -103,10 +103,4 @@ describe('A red rect and arc hallowed out');
 rectMode(CENTER)
 rect(70, 90, 5, 40);
 rect(80, 90, 60, 5);
-describe('purple cross line 1');
-
-}
-  
-  function mousePressed() {
-  print(mouseX, mouseY);
-}
+describe('purple cross line 1');}
