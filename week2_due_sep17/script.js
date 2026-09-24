@@ -1,14 +1,6 @@
 // change the quotes in this array. Be mindful of the quotation marks!
 // this is the only part of the file you need to edit!
 const quotes = [
-  { text: "the intersection of programming, design, and art", source: "Scott" },
-  { text: "a chance for code to be wrong", source: "Sara" },
-  { text: "surprise, exploration, and aesthetic exploration", source: "Sally" },
-  { text: "process over results", source: "Sam" },
-  { text: "form over function", source: "Sean" },
-  { text: "iterative and experimental", source: "Scooby" },
-  { text: "a community of practice", source: "Seth" },
-  { text: "an opportunity to stick it to the man", source: "Shifty-eyed Susan" },
   { text: "computation as an expressive, analytical, and visualizing medium", source: "NYU Steinhardt" },
   { text: "code and programming to create more expressive, designed web work", source: "Wix Studio Blog" },
   { text: "where self-expression and logic meet to form a beautiful kind of modern art", source: "Egyptian Streets" },
