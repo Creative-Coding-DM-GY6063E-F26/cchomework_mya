@@ -1,24 +1,32 @@
-function setup() {
-  createCanvas(400, 400);
+// This is the sketch.js file.
+// Press 's' to export the SVG.
+// Note that p5.js is used in 'global mode'. 
 
+p5.disableFriendlyErrors = true; // keep warnings quiet
+let bDoExportSvg = false; 
 
-noLoop();
-randomSeed(100)
-
+function setup(){
+  // These canvas dimensions are 8.5"x11" at 96 dpi
+  createCanvas(816, 1056); 
 }
 
-function draw() {
-  background(220);
-  circle(random(width), random(height), random(50));
-
+function keyPressed(){
+  if (key == 's'){ 
+    bDoExportSvg = true; 
+  }
 }
 
+function draw(){
+  background(255); 
+  if (bDoExportSvg){
+    beginRecordSvg("myOutput.svg");
+  }
 
-function keyPressed() {
+  // Draw stuff here, such as:
+  line(0,0, mouseX, mouseY); 
 
-  if(key=== 'r'){
-    redraw()
-  } 
-
-
+  if (bDoExportSvg){
+    endRecordSvg();
+    bDoExportSvg = false;
+  }
 }
