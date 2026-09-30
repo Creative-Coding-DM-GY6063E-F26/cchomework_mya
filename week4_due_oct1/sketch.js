@@ -1,31 +1,39 @@
-// This is the sketch.js file.
-// Press 's' to export the SVG.
-// Note that p5.js is used in 'global mode'. 
-
 p5.disableFriendlyErrors = true; // keep warnings quiet
-let bDoExportSvg = false; 
+let bDoExportSvg = false;
 
-function setup(){
-  // These canvas dimensions are 8.5"x11" at 96 dpi
-  createCanvas(816, 1056); 
+function setup() {
+  // 8.5" x 11" at 96 dpi
+  createCanvas(816, 1056);
 }
 
-function keyPressed(){
-  if (key == 's'){ 
-    bDoExportSvg = true; 
+function keyPressed() {
+  if (key === 's') {
+    bDoExportSvg = true;
   }
 }
 
-function draw(){
-  background(255); 
-  if (bDoExportSvg){
-    beginRecordSvg("myOutput.svg");
+function draw() {
+  background(255);
+
+  // Start recording this frame to SVG
+  if (bDoExportSvg) {
+    beginRecordSvg(this, "plotting1.svg");
   }
 
-  // Draw stuff here, such as:
-  line(0,0, mouseX, mouseY); 
+  noFill();
+  strokeWeight(2);
 
-  if (bDoExportSvg){
+  // Your ellipses, shifted to sit centered on the letter-size page
+  for (let i = 0; i < 750; i += 10) {
+    stroke('red');
+    ellipse(508, 400, 100 - i, i);
+
+    stroke('blue');
+    ellipse(258, 400, 100 - i, 6 - i);
+  }
+
+  // Stop recording and save the file
+  if (bDoExportSvg) {
     endRecordSvg();
     bDoExportSvg = false;
   }
