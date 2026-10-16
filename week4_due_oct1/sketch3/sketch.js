@@ -3,8 +3,8 @@ let bDoExportSvg = false;
 
 // Define your layout variables at the top level
 let diaMin = 50;
-let diaMax = 1000;
-let diaStep = 50;
+let diaMax = 800;
+let diaStep = 35;
 
 function setup() {
   // 8.5" x 11" canvas at 96 dpi
@@ -31,7 +31,7 @@ function draw() {
   }
 
   for (let dia = diaMin; dia <= diaMax; dia += diaStep) {
-    ellipse(400,100,dia,dia);
+ellipse(400,100,dia,dia)
     ellipse(width / 2, height / 2, dia, dia);
     
   }
