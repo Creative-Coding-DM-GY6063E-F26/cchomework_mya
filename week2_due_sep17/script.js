@@ -1,6 +1,7 @@
 // change the quotes in this array. Be mindful of the quotation marks!
 // this is the only part of the file you need to edit!
 const quotes = [
+  { text: "something expressive instead of something functional", source: "Wikipedia" },
   { text: "computation as an expressive, analytical, and visualizing medium", source: "NYU Steinhardt" },
   { text: "code and programming to create more expressive, designed web work", source: "Wix Studio Blog" },
   { text: "where self-expression and logic meet to form a beautiful kind of modern art", source: "Egyptian Streets" },
@@ -30,15 +31,15 @@ function pickQuote() {
 }
 
 function draw() {
-  background("blue");
+  background("rgb(15, 14, 14)");
   drawQuote(); // draw the quote on screen
 }
 
 function drawQuote() {
   // draw text
-  fill("red");
+  fill('yellow');
   textAlign(CENTER, CENTER);
-  text("Creative Coding is.....", width / 2, height / 2 - 48);
+  text("Creative Coding is ...", width / 4, height / 2 - 48);
   textSize(32);
   textStyle(BOLD);
   text("“" + current.text + "”", width / 2, height / 2);
@@ -56,5 +57,5 @@ function newQuote() {
 }
 
 function mousePressed() {
-  newQuote(); 
+  newQuote();
 }
