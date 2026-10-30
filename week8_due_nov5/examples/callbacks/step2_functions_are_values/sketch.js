@@ -21,7 +21,7 @@ function setup() {
 
 function draw() {
   background(220);
-  fill('tomato');
+  fill('purple');
   noStroke();
 
   // Now we DO use (), because now we want to run whatever is stored.
@@ -37,12 +37,19 @@ function drawSquare(x, y, size) {
   square(x, y, size);
 }
 
+function drawTriangle(x, y, size) {
+  triangle(x, y - size / 2, x - size / 2, y + size / 2, x + size / 2, y + size / 2);
+}
+
 function keyPressed() {
   if (key === '1') {
     currentShape = drawCircle; // swap which function is stored
   }
   if (key === '2') {
     currentShape = drawSquare;
+  }
+  if (key === '3') {
+    currentShape = drawTriangle;
   }
 }
 

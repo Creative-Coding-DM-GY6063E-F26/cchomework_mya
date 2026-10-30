@@ -18,6 +18,10 @@ let useNoise = false;
 let noiseAmount = 100; // max distance (in pixels) noise can push a circle
 let noiseTime = 0;
 
+let isCircle = true; // default shape type
+
+
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(220);
@@ -37,9 +41,12 @@ function draw() {
       y += map(noise(noiseTime + 1000), 0, 1, -noiseAmount, noiseAmount);
       noiseTime += 0.05;
     }
-
+if (isCircle) {
     circle(x, y, width * sizes[sizeIndex]);
+  } else {
+    rect(x, y, width * sizes[sizeIndex], width * sizes[sizeIndex]);
   }
+}
 }
 
 function keyPressed() {
@@ -58,7 +65,11 @@ function keyPressed() {
   if (key === 'l') {
     useNoise = !useNoise;
   }
+  if (key === 'p') {
+    isCircle = !isCircle;
+  }
 }
+  
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }

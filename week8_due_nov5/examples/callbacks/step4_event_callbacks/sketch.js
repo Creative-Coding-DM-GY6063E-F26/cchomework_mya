@@ -25,7 +25,14 @@ function setup() {
   blueButton.position(60, 10);
   blueButton.mousePressed(() => {
     bgColor = 'steelblue';
+
+
+     let randomButton = createButton('random');
+  randomButton.position(110, 10);
+  randomButton.mousePressed(function () {
+    bgColor = random(['gold', 'orchid', 'mediumseagreen']);
   });
+}
 }
 
 function draw() {
