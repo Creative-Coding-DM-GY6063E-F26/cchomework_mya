@@ -110,4 +110,3 @@ function keyPressed() { // keypressed toggles different modes
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
-}
