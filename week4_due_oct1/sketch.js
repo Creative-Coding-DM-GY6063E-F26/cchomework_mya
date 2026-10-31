@@ -1,4 +1,4 @@
-p5.disableFriendlyErrors = true; // keep warnings quiet
+p5.disableFriendlyErrors = true;
 let bDoExportSvg = false;
 
 function setup() {
@@ -23,7 +23,6 @@ function draw() {
   noFill();
   strokeWeight(2);
 
-  // Your ellipses, shifted to sit centered on the letter-size page
   for (let i = 0; i < 750; i += 10) {
     stroke('red');
     ellipse(508, 400, 100 - i, i);
@@ -32,7 +31,6 @@ function draw() {
     ellipse(258, 400, 100 - i, 6 - i);
   }
 
-  // Stop recording and save the file
   if (bDoExportSvg) {
     endRecordSvg();
     bDoExportSvg = false;
