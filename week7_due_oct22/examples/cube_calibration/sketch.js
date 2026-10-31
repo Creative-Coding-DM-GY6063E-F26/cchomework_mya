@@ -4,6 +4,10 @@ function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
   // create mapper object
   pMapper = createProjectionMapper(this);
+   
+  // create the 5 quads saved in map.json
+   for (let i = 0; i < 5; i++) pMapper.createQuadMap(400, 400);
+  
   // loads calibration in the "maps" directory
   pMapper.load("maps/map.json");
 
