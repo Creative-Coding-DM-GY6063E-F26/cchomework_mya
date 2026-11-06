@@ -6,17 +6,21 @@ async function setup() {
   createCanvas(windowWidth,windowHeight);
 
   console.log("ml5 version:", ml5.version);
-  vid = createCapture(VIDEO); 
+  vid = createCapture(VIDEO, { flipped: true });
   vid.size(320, 240);
-  vid.hide();
+  // vid.hide();
   background(220);
-  handPose = await ml5.handPose();
+  handPose = await ml5.handPose({ flipped: true });
   handPose.detectStart(vid, gotHands);
 }
 
 
 function draw() {
-  background(220);
+  // background(220);
+  if (hands.length > 0) {
+    let hand = hands[0];
+  circle(hand.index_finger_tip.x, hand.index_finger_tip.y, 20);
+  }
 }
 
 

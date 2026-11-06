@@ -11,7 +11,7 @@
  *
  *   click - count a click
  *
- */
+ *
 let clicks = 0;
 
 // p5 calls this ONCE, when the sketch starts

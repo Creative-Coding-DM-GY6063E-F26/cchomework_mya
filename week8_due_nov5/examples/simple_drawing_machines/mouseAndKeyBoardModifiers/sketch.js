@@ -7,11 +7,11 @@
  *   l - toggle noise-based positioning (circles wobble around the mouse)
  *   spacebar - clear the canvas
  *
- */
+ * 
 let sizes = [0.02, 0.0625, 0.12]; // diameters as a fraction of canvas width
 let sizeIndex = 1;
 
-let colors = ['peachpuff', 'tomato', 'mediumseagreen', 'steelblue'];
+let colors = ['neon green', 'neon pink', 'neon blue', 'yellow'];
 let colorIndex = 0;
 
 let useNoise = false;
@@ -24,7 +24,7 @@ let isCircle = true; // default shape type
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(220);
+  background(0);
 }
 
 function draw() {

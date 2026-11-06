@@ -7,8 +7,8 @@ let colors = [];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(220);
-  colors = [color('lightblue'), color('lightcoral')];
+  background(0);
+  colors = [color(57, 255, 20), color(255, 20, 147),];
 }
 
 function draw() {

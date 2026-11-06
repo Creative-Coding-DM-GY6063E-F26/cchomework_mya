@@ -19,7 +19,7 @@ function setup() {
   createCanvas(400, 400);
 
   // every 1000ms (1 second), call changeColor
-  setInterval(changeColor, 1000);
+setInterval(changeColor, 1000);
 
   // THE #1 CALLBACK BUG: try changing the line above to
   //   setInterval(changeColor(), 1000);
@@ -46,7 +46,7 @@ function mousePressed() {
 
   // mousePressed() finishes right away.
   // 1 second later, the arrow function runs and removes the dot.
-  setTimeout(() => {
+  setInterval(() => {
     dot = null;
   }, 1000);
 }
